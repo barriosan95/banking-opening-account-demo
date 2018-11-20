@@ -10,5 +10,9 @@ router.get("/checking",function(req,res){
     res.render('checking');
 });
 
+router.get("/savings",function(req,res){
+    res.render('savings');
+});
+
 
 module.exports = router;
