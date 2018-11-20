@@ -6,6 +6,7 @@ const mainRoutes = require('./routes/main');
 //APP CONFIGURATIONS
 var app = express();
     app.set('view engine','ejs');
+    app.use(express.static("public"));
     app.use(mainRoutes);
 
 
