@@ -1,0 +1,120 @@
+<% include ./partials/header %>
+    <div class ="container">
+        <div class ="container mt-2">
+            <h6 class="mb-0"> Your finances <h6>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class ="container mt-2 mb-2 text-muted">
+            <h5> Tell us about your income.</h5>
+        </div>
+        
+        <!--EMPLOYMENT INFO-->
+        <div class ="container mt-4">
+            <p><b> Employment Status </b></p>
+            <div class="row">
+                <div class="col">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="employment" id="employment" value="employed"> Employed
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="self-employment" id="self-employment" value="self-employed"> Business owner/self-employed
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="unemployed" id="unemployed" value="unemployed"> Not employed
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="student" id="student" value="student"> Student
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="retired" id="retired" value="retired"> Retired
+                        </label>
+                    </div>
+                </div>
+                <div class="col">
+                    
+                </div>
+            </div>
+        </div>
+         <!--Sources of Income -->
+        <div class ="container mt-4">
+            <p><b> Sources of income (Choose all that apply.)</b></p>
+            
+            <div class="row">
+                <!--LEFT OPTIONS-->
+                <div class="col">
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="None" id="None" value="None"> None
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Annuity" id="Annuity" value="Annuity"> Annuity
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Inheritance" id="Inheritance" value="Inheritance"> Inheritance
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Investments" id="Investments" value="Investments"> Investments
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Salary" id="Salary" value="Salary"> Salary/wages
+                        </label>
+                    </div>
+                </div>
+                <!--RIGHT OPTIONS-->
+                <div class="col">
+                     <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Government benefits" id="Government" value="Government-benefits"> Government benefits
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Interest & dividends" id="Interest" value="interest"> Interest & dividends
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Legal settlement" id="LegalSettlement" value="LegalSettlement"> Legal settlement
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Retirement/pension" id="Retirement/pension" value="Retirement/pension"> Retirement/pension
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                              <input class="form-check-input" type="radio" name="Spouse/family" id="Spouse/family" value="Spouse/family"> Spouse/family support
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class ="container">
+                <div class ="row mt-2">
+                    <div class = "col-md-2 ml-auto">
+                        <a href="/checking/application/finances" > <button class="btn btn-primary mt-2 btn-block">Next</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<% include ./partials/footer %>
