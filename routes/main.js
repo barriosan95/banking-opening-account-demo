@@ -22,8 +22,12 @@ router.get("/checking/application/customerInfo",function(req,res){
    res.render('info_app'); 
 });
 
-router.get("/checking/application/finances", function(req,res){
+router.get("/checking/application/customerInfo/finances", function(req,res){
     res.render('finances_app');
+});
+
+router.get("/checking/application/customerInfo/finances/agreements", function(req,res){
+    res.render('agreement_app');
 });
 
 
