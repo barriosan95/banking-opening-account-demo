@@ -30,5 +30,13 @@ router.get("/checking/application/customerInfo/finances/agreements", function(re
     res.render('agreement_app');
 });
 
+router.get("/checking/application/customerInfo/finances/agreements/deposit", function(req,res){
+    res.render('deposit_app');
+});
+
+router.get("/checking/application/customerInfo/finances/agreements/deposit/success", function(req,res){
+    res.render('success_app');
+});
+
 
 module.exports = router;

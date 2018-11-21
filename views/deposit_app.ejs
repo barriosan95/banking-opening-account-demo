@@ -1,0 +1,109 @@
+<% include ./partials/header %>
+    <div class ="container">
+        <div class ="container mt-2">
+            <h6 class="mb-0"> Your account is almost ready! <h6>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class ="container mt-2 mb-2 text-muted">
+            <h5> Opening a Checking account requires a minimum deposit of $25.</h5>
+        </div>
+        <div class ="container mt-4">
+            <p><b> Card Information </b></p>
+            <div class="row">
+                <div class="col">
+                    <label> Card Number </label>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+                <div class ="col">
+                </div>
+            </div>
+            <div class ="row mt-4">
+                <div class ="col">
+                    <label> Expiration Month </label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>MM</option>
+                        <option value="1">01</option>
+                        <option value="2">02</option>
+                        <option value="3">03</option>
+                        <option value="4">04</option>
+                        <option value="5">05</option>
+                        <option value="6">06</option>
+                        <option value="7">07</option>
+                        <option value="8">08</option>
+                        <option value="9">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class ="col">
+                     <label> Expiration Year </label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>YY</option>
+                        <option value="1">2018</option>
+                        <option value="2">2019</option>
+                        <option value="3">2020</option>
+                        <option value="4">2021</option>
+                        <option value="5">2022</option>
+                        <option value="6">2023</option>
+                        <option value="7">2024</option>
+                        <option value="8">2025</option>
+                        <option value="9">2026</option>
+                        <option value="10">2027</option>
+                        <option value="11">2028</option>
+                        <option value="12">2029</option>
+                    </select>
+                </div>
+                <div class ="col">
+                     <label> Security Code </label>
+                     <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+            <div class ="row mt-4">
+                <div class ="col">
+                    <label> Name on card </label>
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <div class ="col">
+                    
+                </div>
+            </div>
+            <div class ="row mt-4">
+                <div class ="col">
+                    <label> Country </label>
+                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <option selected>United States </option>
+                        <option value="1">Canada</option>
+                    </select>
+                </div>
+                <div class ="col">
+                    <label> Zip Code </label>
+                    <input type="number" class="form-control" placeholder="">
+                </div>
+            </div>
+        </div>
+         <div class ="container mt-4">
+            <p><b> Deposit Amount </b></p>
+            <div class="row">
+                <div class ="container">
+                    <div class ="row">
+                        <div class = "col-md-3 mr-auto">
+                            <input type="number" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class ="container">
+            <div class ="row mt-2">
+                <div class = "col-md-3 mr-auto">
+                    <a href="/checking/application/customerInfo/finances/agreements/deposit/success" > <button class="btn btn-primary mt-2 btn-block">Complete deposit</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include ./partials/footer %>
