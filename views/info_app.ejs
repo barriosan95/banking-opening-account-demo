@@ -1,4 +1,6 @@
 <% include ./partials/header %>
+
+    <!--PAGE HEADER-->
     <div class ="container">
         <div class ="container mt-2">
             <h6 class="mb-0"> Personal Information <h6>
@@ -10,169 +12,173 @@
             <h5> Tell us about yourself. </h5>
         </div>
     </div>
+    
+    
+    <!--MAIN FORM-->
     <div class ="container mt-4">
-        <p><b>Personal details</b></p>
-        <form>
-          <div class="row">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="First name">
+        
+        <form action="/add-customer" method="POST">
+            <!--PERSONAL INFO -->
+            <div class = "container">
+                <p><b>Personal details</b></p>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" name ="first_name" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" name ="middle_name" placeholder="Middle name(optional)">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <input type="text" class="form-control" name= "last_name" placeholder="Last name">
+                        </div>
+                        <div class="col">
+                            <select class="custom-select mr-sm-2" name="suffix" id="inlineFormCustomSelect">
+                                <option selected>Suffix(optional)</option>
+                                <option value="Jr">Jr</option>
+                                <option value="Sr">Sr</option>
+                                <option value="II">II</option>
+                            </select>
+                        </div>
+                    </div>
             </div>
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Middle name (optional)">
+            <!--IDENTIFICATION FORM-->
+            <div class ="container mt-4">
+                <p><b>Identification</b></p>
+                    <div class="row">
+                      <div class="col">
+                          <select class="custom-select mr-sm-2" name="visa_status" id="inlineFormCustomSelect">
+                            <option selected value="U.S Citizen" >U.S Citizen</option>
+                            <option value="Permanent Resident">Permanent Resident</option>
+                            <option value="Temporary Resident">Temporary Resident </option>
+                            <option value="Non-resident">Non-resident </option>
+                          </select>
+                        </div>
+                        <div class ="col"></div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label> Date of birth</label>
+                            <input type="date" name="dob" class="form-control" placeholder="">
+                        </div>
+                        <div class="col">
+                            <label>Social Security number</label>
+                            <input type="number" name="ssn" class="form-control" placeholder="XXX-XX-XXXX">
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label> Type of ID </label>
+                            <select class="custom-select mr-sm-2" name="type_id" id="inlineFormCustomSelect">
+                            <option value="Driver's license" >Driver's license </option>
+                            <option value="State ID" >State ID </option>
+                          </select>
+                        </div>
+                        <div class="col">
+                            <label> ID number</label>
+                            <input type="text" name="id_number" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                     <div class="row mt-4">
+                        <div class="col">
+                            <label> Expiration date</label>
+                            <input type="date" name="exp_date" class="form-control" placeholder="">
+                        </div>
+                        <div class="col">
+                            <label>Issuing State</label>
+                            <select class="custom-select mr-sm-2" name="issue_state" id="inlineFormCustomSelect">
+                            <option value="AL">Alabama</option>
+                            <option value="CA">California</option>
+                            <option value="FL">Florida</option>
+                            <option value="IL">Illinois</option>
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
+                          </select>
+                        </div>
+                    </div>
             </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col">
-              <input type="text" class="form-control" placeholder="Last name">
+            
+            <!--HOME ADDRESS-->
+            <div class ="container mt-4">
+                <p><b>Home address</b></p>
+                    <div class="row">
+                        <div class="col">
+                            <label>Street address </label>
+                            <input type="text" name="street" class="form-control" placeholder="">
+                        </div>
+                        <div class="col">
+                            <label> Suite/apt/other(optional)</label>
+                            <input type="text" name="suite_apt"class="form-control" placeholder="">
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label>Zip code</label>
+                            <input type="number" name="zip_code" class="form-control" placeholder="">
+                        </div>
+                        <div class ="col"></div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label>City </label>
+                                <select class="custom-select mr-sm-2" name="city" id="inlineFormCustomSelect">
+                                <option value="Miami">Miami</option>
+                                <option value="San Francisco">San Francisco</option>
+                                <option value="New York">New York </option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label> State </label>
+                            <select class="custom-select mr-sm-2" name="state" id="inlineFormCustomSelect">
+                                <option value="AL">Alabama</option>
+                                <option value="CL">California</option>
+                                <option value="FL">Florida</option>
+                                <option value="IL">Chicago</option>
+                                <option value="NY">New York</option>
+                                <option value="TX">Texas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class ="row mt-4">
+                        <div class="col">
+                            <label> Email address </label>
+                            <input type="text" name="email" class="form-control" placeholder="">
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div class ="row mt-4">
+                        <div class="col">
+                            <label> Phone number </label>
+                            <input type="number" name="phone_number" class="form-control" placeholder="">
+                        </div>
+                        <div class="col">
+                            <label> Phone type </label>
+                                <select class="custom-select mr-sm-2" name="phone_type" id="inlineFormCustomSelect">
+                                    <option value="Mobile">Mobile</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Home">Home</option>
+                                </select>
+                        </div>
+                    </div>
             </div>
-            <div class="col">
-                  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option selected>Suffix(optional)</option>
-                    <option value="1">Jr</option>
-                    <option value="2">Sr</option>
-                    <option value="3">II</option>
-                  </select>
+            <!--CHECKNBOX-->
+            <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                <input type="checkbox" class="custom-control-input" id="customControlInline">
+                    <label class="custom-control-label" for="customControlInline">Check this box if your information is correct.</label>
             </div>
-          </div>
+            <div class ="container">
+                <div class ="row mt-2">
+                    <div class = "col-md-2 ml-auto">
+                        <a href="/checking/application" > <button class="btn btn-light mt-2">Back</button></a>
+                        <button type="submit" class="btn btn-primary mt-2">Next</button>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
-    <div class ="container mt-4">
-        <p><b>Identification</b></p>
-        <form>
-          <div class="row">
-              <div class="col">
-                  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option selected>U.S Citizen</option>
-                    <option value="1">Permanent Resident</option>
-                    <option value="2">Temporary Resident </option>
-                    <option value="3">Non-resident </option>
-                  </select>
-                </div>
-                <div class ="col">
-                    
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <label> Date of birth</label>
-                    <input type="date" class="form-control" placeholder="">
-                </div>
-                <div class="col">
-                    <label>Social Security number</label>
-                    <input type="number" class="form-control" placeholder="XXX-XX-XXXX">
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <label> Type of ID </label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option value="1">Driver's license </option>
-                    <option value="2">State ID </option>
-                  </select>
-                </div>
-                <div class="col">
-                    <label> ID number</label>
-                    <input type="number" class="form-control" placeholder="">
-                </div>
-            </div>
-             <div class="row mt-4">
-                <div class="col">
-                    <label> Expiration date</label>
-                    <input type="date" class="form-control" placeholder="">
-                </div>
-                <div class="col">
-                    <label>Issuing State</label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                    <option value="1">Alabama</option>
-                    <option value="2">California</option>
-                    <option value="3">Florida</option>
-                    <option value="4">Chicago</option>
-                    <option value="5">New York</option>
-                    <option value="6">Texas</option>
-                  </select>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class ="container mt-4">
-         <p><b>Home address</b></p>
-         <form>
-            <div class="row">
-                <div class="col">
-                    <label>Street address </label>
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-                <div class="col">
-                    <label> Suite/apt/other(optional)</label>
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <label>Zip code</label>
-                    <input type="number" class="form-control" placeholder="">
-                </div>
-                <div class ="col">
-                    
-                </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col">
-                    <label>City </label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option value="1">Miami</option>
-                        <option value="2">San Francisco</option>
-                        <option value="3">New York </option>
-                    </select>
-                </div>
-                <div class="col">
-                    <label> State </label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option value="1">Alabama</option>
-                        <option value="2">California</option>
-                        <option value="3">Florida</option>
-                        <option value="4">Chicago</option>
-                        <option value="5">New York</option>
-                        <option value="6">Texas</option>
-                    </select>
-                </div>
-            </div>
-            <div class ="row mt-4">
-                <div class="col">
-                    <label> Email address </label>
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-                <div class="col">
-                    
-                </div>
-            </div>
-            <div class ="row mt-4">
-                <div class="col">
-                    <label> Phone number </label>
-                    <input type="number" class="form-control" placeholder="">
-                </div>
-                <div class="col">
-                    <label> Phone type </label>
-                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                        <option value="1">Mobile</option>
-                        <option value="2">Work</option>
-                        <option value="3">Home</option>
-                    </select>
-                </div>
-            </div>
-        </form>
-        <div class="custom-control custom-checkbox my-1 mr-sm-2">
-            <input type="checkbox" class="custom-control-input" id="customControlInline">
-            <label class="custom-control-label" for="customControlInline">Check this box if your information is correct.</label>
-        </div>
-        <div class ="container">
-            <div class ="row mt-2">
-                <div class = "col-md-2 ml-auto">
-                    <a href="/checking/application" > <button class="btn btn-light mt-2">Back</button></a>
-                    <a href="/checking/application/customerInfo/finances" > <button class="btn btn-primary mt-2">Next</button></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     
 <% include ./partials/footer %>
