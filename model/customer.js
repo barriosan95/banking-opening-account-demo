@@ -43,8 +43,18 @@ const customerSchema = new Schema({
         email: { type: String, required: true},
         phone_number: {type: Number, required: true},
         phone_type: {type: String, required: true},
-    }
+    },
     
+    signature: {
+        type: String,
+        default: "N/A",
+        required: true,
+    },
+    
+    signDate:{
+        type: Date,
+        default: Date.now(),
+    }
     
 });
 

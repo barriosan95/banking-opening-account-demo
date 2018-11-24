@@ -10,111 +10,45 @@
             <h5> Tell us about your income.</h5>
         </div>
         
-        <!--EMPLOYMENT INFO-->
-        <div class ="container mt-4">
-            <p><b> Employment Status </b></p>
-            <div class="row">
-                <div class="col">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="employment" id="employment" value="employed"> Employed
-                        </label>
+        <form action="/add-fin-info/<%=req.params.id%>" method ="POST" >
+            <!--EMPLOYMENT INFO-->
+            <div class ="container mt-4">
+                <p><b> Employment Status </b></p>
+                <div class="row">
+                    <div class="col">
+                        <select class="custom-select mr-sm-2" name="employment_status" id="inlineFormCustomSelect">
+                            <option value="Employed">Employed</option>
+                            <option value="Self-employed">Business owner/ self-employed</option>
+                            <option value="Unemployed">Not employed</option>
+                            <option value="Student">Student</option>
+                            <option value="Retired">Retired</option>
+                        </select>
                     </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="self-employment" id="self-employment" value="self-employed"> Business owner/self-employed
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="unemployed" id="unemployed" value="unemployed"> Not employed
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="student" id="student" value="student"> Student
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="retired" id="retired" value="retired"> Retired
-                        </label>
-                    </div>
-                </div>
-                <div class="col">
-                    
+                    <div class="col"></div>
                 </div>
             </div>
-        </div>
-         <!--Sources of Income -->
-        <div class ="container mt-4">
-            <p><b> Sources of income (Choose all that apply.)</b></p>
-            
-            <div class="row">
-                <!--LEFT OPTIONS-->
-                <div class="col">
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="None" id="None" value="None"> None
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Annuity" id="Annuity" value="Annuity"> Annuity
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Inheritance" id="Inheritance" value="Inheritance"> Inheritance
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Investments" id="Investments" value="Investments"> Investments
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Salary" id="Salary" value="Salary"> Salary/wages
-                        </label>
-                    </div>
-                </div>
-                <!--RIGHT OPTIONS-->
-                <div class="col">
-                     <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Government benefits" id="Government" value="Government-benefits"> Government benefits
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Interest & dividends" id="Interest" value="interest"> Interest & dividends
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Legal settlement" id="LegalSettlement" value="LegalSettlement"> Legal settlement
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Retirement/pension" id="Retirement/pension" value="Retirement/pension"> Retirement/pension
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <label class="form-check-label">
-                              <input class="form-check-input" type="radio" name="Spouse/family" id="Spouse/family" value="Spouse/family"> Spouse/family support
-                        </label>
+            <div class ="container mt-4">
+                <p><b>Income</b></p>
+                <div class="row">
+                    <div class="col">
+                        <label> Main source of income </label>
+                        <select class="custom-select mr-sm-2" name="main_income" id="inlineFormCustomSelect">
+                            <option value="None">None</option>
+                            <option value="Annuity">Annuity</option>
+                            <option value="Salary">Salary/wages</option>
+                            <option value="Government benefits">Government benefits</option>
+                        </select>
                     </div>
                 </div>
             </div>
+            <!--Sources of Income -->
             <div class ="container">
                 <div class ="row mt-2">
                     <div class = "col-md-2 ml-auto">
-                        <a href="/checking/application/customerInfo/finances/agreements" > <button class="btn btn-primary mt-2 btn-block">Next</button></a>
+                        <button type ="submit" class="btn btn-primary mt-2 btn-block">Next</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 <% include ./partials/footer %>

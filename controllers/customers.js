@@ -1,6 +1,5 @@
 const Customer = require('../model/customer');
 
-
 exports.createCustomer = (req,res, next) => {
   
     const first_name = req.body.first_name;
@@ -54,7 +53,8 @@ exports.createCustomer = (req,res, next) => {
         .save()
         .then(result => {
             console.log('New customer created');
-            res.redirect("/checking/application/customerInfo/finances")
+            console.log(result._id);
+            res.redirect("/checking/application/customerInfo/finances/"+result._id);
         })
         .catch(err => {
             console.log(err);

@@ -45,25 +45,26 @@
             <input type="checkbox" class="custom-control-input" id="customControlInline">
             <label class="custom-control-label" for="customControlInline">By checking this box you agree to all the above terms. </label>
         </div>
-        <form>
+        <form action="/sign-agreements/<%=req.params.id%>" method="POST">
             <div class="row">
                 <div class="col">
                     <label> Sign with your name </label>
-                    <input type="text" class="form-control" placeholder="">
+                    <input type="text" class="form-control" name="signature" placeholder="">
                 </div>
                 <div class="col">
                     <label> Today's Date</label>
-                    <input type="date" class="form-control" placeholder="">
+                    <input type="date" class="form-control" name ="sign_date" placeholder="">
+                </div>
+            </div>
+            <div class ="container">
+                <div class ="row mt-2">
+                    <div class = "col-md-3 mr-auto">
+                        <button type="submit" class="btn btn-primary mt-2 btn-block">Accept & Continue </button></a>
+                    </div>
                 </div>
             </div>
         </form>
-        <div class ="container">
-                <div class ="row mt-2">
-                    <div class = "col-md-3 mr-auto">
-                        <a href="/checking/application/customerInfo/finances/agreements/deposit" > <button class="btn btn-primary mt-2 btn-block">Accept & Continue </button></a>
-                </div>
-            </div>
-        </div>
+
     </div>
 
 <% include ./partials/footer %>

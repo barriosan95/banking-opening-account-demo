@@ -21,15 +21,15 @@ router.get("/checking/application/customerInfo",function(req,res){
    res.render('info_app'); 
 });
 
-router.get("/checking/application/customerInfo/finances", function(req,res){
-    res.render('finances_app');
+router.get("/checking/application/customerInfo/finances/:id", function(req,res){
+    res.render('finances_app',{req:req});
 });
 
-router.get("/checking/application/customerInfo/finances/agreements", function(req,res){
-    res.render('agreement_app');
+router.get("/checking/application/customerInfo/finances/:id/agreements", function(req,res){
+    res.render('agreement_app',{req:req});
 });
 
-router.get("/checking/application/customerInfo/finances/agreements/deposit", function(req,res){
+router.get("/checking/application/customerInfo/finances/:id/agreements/deposit", function(req,res){
     res.render('deposit_app');
 });
 
