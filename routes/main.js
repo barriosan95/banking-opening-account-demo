@@ -1,5 +1,8 @@
 const express = require('express');
-const router = express.Router(); 
+const router = express.Router();
+
+const Customer = require('../model/customer');
+
 
 router.get("/", function(req,res){
     res.render('main');
@@ -30,11 +33,21 @@ router.get("/checking/application/customerInfo/finances/:id/agreements", functio
 });
 
 router.get("/checking/application/customerInfo/finances/:id/agreements/deposit", function(req,res){
-    res.render('deposit_app');
+    res.render('deposit_app',{req:req});
 });
 
-router.get("/checking/application/customerInfo/finances/agreements/deposit/success", function(req,res){
-    res.render('success_app');
+router.get("/checking/application/customerInfo/finances/agreements/:id/deposit/success", function(req,res){
+    Customer.findById(req.params.id).exec(function(err,found_customer){
+        
+        if(err || !found_customer){
+            res.redirect("/");
+        } else {
+            console.log(found_customer);
+            res.render("success_app",{customer: found_customer});
+            
+        }
+        
+    });
 });
 
 
