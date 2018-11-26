@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col">
                         <label> Card Number </label>
-                        <input type="number" class="form-control" placeholder="">
+                        <input type="number" class="form-control" placeholder="" required >
                     </div>
                     <div class ="col">
                     </div>
@@ -24,7 +24,7 @@
                 <div class ="row mt-4">
                     <div class ="col">
                         <label> Expiration Month </label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
                             <option selected>MM</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
@@ -42,7 +42,7 @@
                     </div>
                     <div class ="col">
                          <label> Expiration Year </label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required >
                             <option selected>YY</option>
                             <option value="2018">2018</option>
                             <option value="2019">2019</option>
@@ -60,27 +60,27 @@
                     </div>
                     <div class ="col">
                          <label> Security Code </label>
-                         <input type="number" class="form-control" placeholder="">
+                         <input type="number" class="form-control" placeholder="" required>
                     </div>
                 </div>
                 <div class ="row mt-4">
                     <div class ="col">
                         <label> Cardholder Name </label>
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" class="form-control" placeholder="" required>
                     </div>
                     <div class ="col"></div>
                 </div>
                 <div class ="row mt-4">
                     <div class ="col">
                         <label> Country </label>
-                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" required>
                             <option selected>United States </option>
                             <option value="Canada">Canada</option>
                         </select>
                     </div>
                     <div class ="col">
                         <label> Zip Code </label>
-                        <input type="number" class="form-control" placeholder="">
+                        <input type="number" class="form-control" placeholder="" required>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                     <div class ="container">
                         <div class ="row">
                             <div class = "col-md-3 mr-auto">
-                                <input type="number" name="initial_deposit" class="form-control" placeholder="">
+                                <input type="number" name="initial_deposit" class="form-control" min="25" placeholder="" required >
                             </div>
                         </div>
                     </div>

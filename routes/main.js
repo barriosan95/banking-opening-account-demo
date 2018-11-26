@@ -44,7 +44,6 @@ router.get("/checking/application/customerInfo/finances/agreements/:id/deposit/s
         } else {
             console.log(found_customer);
             res.render("success_app",{customer: found_customer});
-            
         }
         
     });

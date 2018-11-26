@@ -23,7 +23,7 @@
                 <p><b>Personal details</b></p>
                     <div class="row">
                         <div class="col">
-                            <input type="text" class="form-control" name ="first_name" placeholder="First name">
+                            <input type="text" class="form-control" name ="first_name" placeholder="First name" required>
                         </div>
                         <div class="col">
                             <input type="text" class="form-control" name ="middle_name" placeholder="Middle name(optional)">
@@ -31,7 +31,7 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col">
-                            <input type="text" class="form-control" name= "last_name" placeholder="Last name">
+                            <input type="text" class="form-control" name= "last_name" placeholder="Last name" required>
                         </div>
                         <div class="col">
                             <select class="custom-select mr-sm-2" name="suffix" id="inlineFormCustomSelect">
@@ -48,7 +48,7 @@
                 <p><b>Identification</b></p>
                     <div class="row">
                       <div class="col">
-                          <select class="custom-select mr-sm-2" name="visa_status" id="inlineFormCustomSelect">
+                          <select class="custom-select mr-sm-2" name="visa_status" id="inlineFormCustomSelect" required>
                             <option selected value="U.S Citizen" >U.S Citizen</option>
                             <option value="Permanent Resident">Permanent Resident</option>
                             <option value="Temporary Resident">Temporary Resident </option>
@@ -61,35 +61,35 @@
                     <div class="row mt-4">
                         <div class="col">
                             <label> Date of birth</label>
-                            <input type="date" name="dob" class="form-control" placeholder="">
+                            <input type="date" name="dob" class="form-control" placeholder="" required>
                         </div>
                         <div class="col">
                             <label>Social Security number</label>
-                            <input type="number" name="ssn" class="form-control" placeholder="XXX-XX-XXXX">
+                            <input type="number"  name="ssn" class="form-control" placeholder="XXX-XX-XXXX" required>
                         </div>
                     </div>
                     
                     <div class="row mt-4">
                         <div class="col">
                             <label> Type of ID </label>
-                            <select class="custom-select mr-sm-2" name="type_id" id="inlineFormCustomSelect">
+                            <select class="custom-select mr-sm-2" name="type_id" id="inlineFormCustomSelect" required>
                             <option value="Driver's license" >Driver's license </option>
                             <option value="State ID" >State ID </option>
                           </select>
                         </div>
                         <div class="col">
                             <label> ID number</label>
-                            <input type="text" name="id_number" class="form-control" placeholder="">
+                            <input type="text" name="id_number" class="form-control" placeholder="" required>
                         </div>
                     </div>
                      <div class="row mt-4">
                         <div class="col">
                             <label> Expiration date</label>
-                            <input type="date" name="exp_date" class="form-control" placeholder="">
+                            <input type="date" name="exp_date" class="form-control" placeholder="" required>
                         </div>
                         <div class="col">
                             <label>Issuing State</label>
-                            <select class="custom-select mr-sm-2" name="issue_state" id="inlineFormCustomSelect">
+                            <select class="custom-select mr-sm-2" name="issue_state" id="inlineFormCustomSelect" required>
                             <option value="AL">Alabama</option>
                             <option value="CA">California</option>
                             <option value="FL">Florida</option>
@@ -107,7 +107,7 @@
                     <div class="row">
                         <div class="col">
                             <label>Street address </label>
-                            <input type="text" name="street" class="form-control" placeholder="">
+                            <input type="text" name="street" class="form-control" placeholder="" required>
                         </div>
                         <div class="col">
                             <label> Suite/apt/other(optional)</label>
@@ -117,7 +117,7 @@
                     <div class="row mt-4">
                         <div class="col">
                             <label>Zip code</label>
-                            <input type="number" name="zip_code" class="form-control" placeholder="">
+                            <input type="number" name="zip_code" class="form-control" placeholder="" required>
                         </div>
                         <div class ="col"></div>
                     </div>
@@ -132,11 +132,11 @@
                         </div>
                         <div class="col">
                             <label> State </label>
-                            <select class="custom-select mr-sm-2" name="state" id="inlineFormCustomSelect">
+                            <select class="custom-select mr-sm-2" name="state" id="inlineFormCustomSelect" required>
                                 <option value="AL">Alabama</option>
                                 <option value="CL">California</option>
                                 <option value="FL">Florida</option>
-                                <option value="IL">Chicago</option>
+                                <option value="IL">Illinois</option>
                                 <option value="NY">New York</option>
                                 <option value="TX">Texas</option>
                             </select>
@@ -145,18 +145,18 @@
                     <div class ="row mt-4">
                         <div class="col">
                             <label> Email address </label>
-                            <input type="text" name="email" class="form-control" placeholder="">
+                            <input type="text" name="email" class="form-control" placeholder="" required>
                         </div>
                         <div class="col"></div>
                     </div>
                     <div class ="row mt-4">
                         <div class="col">
                             <label> Phone number </label>
-                            <input type="number" name="phone_number" class="form-control" placeholder="">
+                            <input type="number" name="phone_number" class="form-control" placeholder="" required>
                         </div>
                         <div class="col">
                             <label> Phone type </label>
-                                <select class="custom-select mr-sm-2" name="phone_type" id="inlineFormCustomSelect">
+                                <select class="custom-select mr-sm-2" name="phone_type" id="inlineFormCustomSelect" required>
                                     <option value="Mobile">Mobile</option>
                                     <option value="Work">Work</option>
                                     <option value="Home">Home</option>
@@ -166,14 +166,14 @@
             </div>
             <!--CHECKNBOX-->
             <div class="custom-control custom-checkbox my-1 mr-sm-2">
-                <input type="checkbox" class="custom-control-input" id="customControlInline">
-                    <label class="custom-control-label" for="customControlInline">Check this box if your information is correct.</label>
+                <input type="checkbox" onchange="checkBoxConfirm()" class="custom-control-input" id="infoCorrectCheck">
+                    <label class="custom-control-label" for="infoCorrectCheck">Check this box if your information is correct.</label>
             </div>
             <div class ="container">
                 <div class ="row mt-2">
                     <div class = "col-md-2 ml-auto">
                         <a href="/checking/application"><button class="btn btn-light mt-2">Back</button></a>
-                        <button type="submit" id="personalInfoNext" class="btn btn-primary mt-2">Next</button>
+                        <button type="submit" id="personalInfoNext" class="btn btn-primary mt-2" disabled >Next</button>
                     </div>
                 </div>
             </div>

@@ -42,24 +42,24 @@
             In hac habitasse platea dictumst. Praesent eu erat dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="custom-control custom-checkbox my-1 mr-sm-2">
-            <input type="checkbox" class="custom-control-input" id="customControlInline">
-            <label class="custom-control-label" for="customControlInline">By checking this box you agree to all the above terms. </label>
+            <input type="checkbox" onchange = "checkAgreementConfirm()" class="custom-control-input" id="checkAgreement">
+            <label class="custom-control-label" for="checkAgreement">By checking this box you agree to all the above terms. </label>
         </div>
         <form action="/sign-agreements/<%=req.params.id%>" method="POST">
             <div class="row">
                 <div class="col">
                     <label> Sign with your name </label>
-                    <input type="text" class="form-control" name="signature" placeholder="">
+                    <input type="text" class="form-control" name="signature" placeholder="" required>
                 </div>
                 <div class="col">
                     <label> Today's Date</label>
-                    <input type="date" class="form-control" name ="sign_date" placeholder="">
+                    <input type="date" class="form-control" name ="sign_date" placeholder="" required>
                 </div>
             </div>
             <div class ="container">
                 <div class ="row mt-2">
                     <div class = "col-md-3 mr-auto">
-                        <button type="submit" class="btn btn-primary mt-2 btn-block">Accept & Continue </button></a>
+                        <button type="submit" id="agree_cont" class="btn btn-primary mt-2 btn-block" disabled >Accept & Continue </button></a>
                     </div>
                 </div>
             </div>
